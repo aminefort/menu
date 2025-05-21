@@ -8,7 +8,7 @@ body {
     margin: 0;
     user-select: none;
     background-color: transparent !important;
-    perspective: 1000px;
+    perspective: 2000px;
 }
 
 @font-face {
@@ -33,7 +33,7 @@ body {
 }
 
 #mainDivMenus {
-    width: 15%;
+    width: 18%;
     height: 70%;
     position: absolute;
     right: 4%;
@@ -47,92 +47,88 @@ body {
     justify-content: flex-start;
     gap: 0.7vw;
     overflow-y: scroll;
-    transform: rotate3d(0, 1, 0, -15deg);
+    transform: rotate3d(0, 1, 0, -25deg) rotate3d(1, 0, 0, 15deg);
     transform-style: preserve-3d;
+    transform-origin: right center;
 }
 
 .mainDivMenuDiv {
     width: 94%;
     height: fit-content;
-    padding-top: 0.8vw;
-    padding-bottom: 0.8vw;
-    padding-left: 0.7vw;
+    padding: 1vw 0.8vw;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(10px);
-    gap: 0.6vw;
+    gap: 0.8vw;
     transform: translateZ(0);
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .mainDivMenuDivDisabled {
     width: 94%;
     height: fit-content;
-    padding-top: 0.8vw;
-    padding-bottom: 0.8vw;
-    padding-left: 0.7vw;
+    padding: 1vw 0.8vw;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid rgba(232, 17, 17, 0.24);
-    background: rgba(158, 55, 41, 0.1);
+    background: linear-gradient(135deg, rgba(158, 55, 41, 0.15), rgba(158, 55, 41, 0.05));
     backdrop-filter: blur(10px);
-    gap: 0.6vw;
+    gap: 0.8vw;
     transform: translateZ(0);
-    box-shadow: 0 5px 15px rgba(158, 55, 41, 0.2);
+    box-shadow: 0 10px 20px rgba(158, 55, 41, 0.2);
 }
 
 .mainDivMenuDiv:hover {
-    transform: translateZ(20px) scale(1.02);
+    transform: translateZ(30px) scale(1.03);
     border: 1px solid #08b8cf;
-    background: rgba(8, 184, 207, 0.1);
-    box-shadow: 0 8px 25px rgba(8, 184, 207, 0.3);
+    background: linear-gradient(135deg, rgba(8, 184, 207, 0.15), rgba(8, 184, 207, 0.05));
+    box-shadow: 0 15px 30px rgba(8, 184, 207, 0.3);
 }
 
 .mainDivMenuDivHeader {
     width: 94%;
     height: fit-content;
-    padding-top: 0.8vw;
-    padding-bottom: 0.8vw;
-    padding-left: 0.7vw;
+    padding: 1vw 0.8vw;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
     backdrop-filter: blur(10px);
-    gap: 0.6vw;
-    transform: translateZ(30px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    gap: 0.8vw;
+    transform: translateZ(40px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 #mainDivMenuDivIconDiv {
     width: fit-content;
     height: fit-content;
-    padding: 0.45vw;
-    font-size: 0.5vw;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.15);
+    padding: 0.6vw;
+    font-size: 0.6vw;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #FFF;
     backdrop-filter: blur(5px);
-    transform: translateZ(10px);
+    transform: translateZ(15px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 #mainDivMenuDivTextsDiv {
@@ -145,16 +141,19 @@ body {
     flex-direction: column;
     color: #FFF;
     font-family: Gilroy-SemiBold;
-    transform: translateZ(5px);
+    transform: translateZ(10px);
 }
 
 #mainDivMenuDivTextsDiv h4 {
     font-size: 0.9vw;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.02em;
 }
 
 #mainDivMenuDivTextsDiv span {
     font-size: 0.7vw;
     font-weight: 400;
-    opacity: 0.8;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    margin-top: 0.2vw;
 }
